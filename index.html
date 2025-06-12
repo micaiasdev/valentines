@@ -148,18 +148,17 @@
     <div class="emoji" style="left: 50%; animation-duration: 12s">😻</div>
 
     <div class="container">
-      <!-- Player Spotify (substitua o src pelo seu link) -->
-      <iframe
-        style="border-radius: 12px"
-        src="https://open.spotify.com/embed/track/7vsugwnjgmURUXlsL4Z93i?utm_source=generator&theme=0"
-        width="300px"
-        height="80"
-        frameborder="0"
-        allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-        autoplay="true"
-      ></iframe>
+      <div style="background:#181818; color:#fff; border-radius:12px; width:320px; padding:16px; display:flex; align-items:center; gap:16px; font-family:sans-serif; box-shadow:0 2px 8px rgba(0,0,0,0.2);">
+  <img src="https://i.scdn.co/image/ab67616d0000b273eb2d27c66e5808c87cf2eb00" alt="Capa do álbum" style="width:56px; height:56px; border-radius:8px; object-fit:cover;">
+  <div style="flex:1;">
+    <div style="font-weight:bold; font-size:1.1em; letter-spacing:0.5px;">SORTE</div>
+    <div style="font-size:0.95em; color:#b3b3b3;">Di Ferrero</div>
+  </div>
+  <button id="playBtn" style="background:#fff; border:none; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; cursor:pointer;">
+    <span style="color:#ffffff; width:1.3em;"><img style="width:1.3em;" src="play.png" alt="button-play"></span>
+  </button>
+</div>
+<audio id="musica" src="musica.mp3"></audio>
 
       <!-- Moldura do "celular" com carrossel de imagens -->
       <div class="phone-frame">
@@ -203,6 +202,39 @@
     </div>
 
     <script>
+
+      window.onload = function() {
+  var audio = document.getElementById('musica');
+  var playBtn = document.getElementById('playBtn');
+  var img = playBtn.querySelector('img');
+
+  // Tenta iniciar a música automaticamente
+  audio.play().then(function() {
+    img.src = 'pause.png';
+    img.alt = 'button-pause';
+  }).catch(function() {
+    // Caso o navegador bloqueie o autoplay, mantém o ícone de play
+    img.src = 'play.png';
+    img.alt = 'button-play';
+  });
+
+  playBtn.onclick = function() {
+    if (audio.paused) {
+      audio.play();
+      img.src = 'pause.png';
+      img.alt = 'button-pause';
+    } else {
+      audio.pause();
+      img.src = 'play.png';
+      img.alt = 'button-play';
+    }
+  };
+
+  audio.addEventListener('ended', function() {
+    img.src = 'play.png';
+    img.alt = 'button-play';
+  });
+};
       // Contador dinâmico com conversão para anos e meses
       function atualizarContador() {
         const dataFinal = new Date('2023-06-12T00:00:00') // Data para o Dia dos Namorados
