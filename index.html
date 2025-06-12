@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feliz Dia dos Namorados!</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: #fff;
+        overflow-x: hidden;
+        position: relative;
+      }
+      .flower-button {
+        background-color: #bd1270; /* Cor amarela suave */
+        color: #fff; /* Cor do texto branca */
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      /* Efeito de hover */
+      .flower-button:hover {
+        background-color: #bd1270; /* Amarelo mais intenso */
+        transform: scale(1.1); /* Aumentar o tamanho do botão */
+      }
+
+      .emoji {
+        position: absolute;
+        animation: fall 8s infinite linear;
+        font-size: 2rem;
+      }
+
+      @keyframes fall {
+        0% {
+          top: -10%;
+          opacity: 1;
+        }
+        100% {
+          top: 110%;
+          opacity: 0;
+        }
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .phone-frame {
+        width: 90%;
+        max-width: 350px;
+        height: 600px;
+        border-radius: 30px;
+        overflow: hidden;
+        background-color: #000;
+        border: 8px solid #444;
+        box-shadow: 0 0 20px #000;
+        margin-bottom: 20px;
+      }
+
+      .carousel {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        animation: slide 15s infinite;
+      }
+
+      .carousel img {
+        width: 100%;
+        flex-shrink: 0;
+        object-fit: cover;
+      }
+
+      @keyframes slide {
+        0%,
+        20% {
+          transform: translateX(0%);
+        }
+        25%,
+        45% {
+          transform: translateX(-100%);
+        }
+        50%,
+        70% {
+          transform: translateX(-200%);
+        }
+        75%,
+        95% {
+          transform: translateX(-300%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+
+      iframe {
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      .contador {
+        font-size: 1.0rem;
+        margin-bottom: 10px;
+        color: #e9b528;
+        font-weight: bold;
+      }
+
+      .justificativa {
+        font-style: italic;
+        max-width: 400px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+
+      /* Responsividade para dispositivos móveis */
+      @media (max-width: 768px) {
+        .phone-frame {
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .carousel img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Emojis flutuando -->
+    <div class="emoji" style="left: 20%; animation-duration: 8s">😍</div>
+    <div class="emoji" style="left: 70%; animation-duration: 10s">🥰</div>
+    <div class="emoji" style="left: 50%; animation-duration: 12s">😻</div>
+
+    <div class="container">
+      <!-- Player Spotify (substitua o src pelo seu link) -->
+      <iframe
+        style="border-radius: 12px"
+        src="https://open.spotify.com/embed/track/7vsugwnjgmURUXlsL4Z93i?utm_source=generator&theme=0"
+        width="20%"
+        height="80"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        autoplay="true"
+      ></iframe>
+
+      <!-- Moldura do "celular" com carrossel de imagens -->
+      <div class="phone-frame">
+        <div class="carousel">
+          <img src="imagem1.jpg" alt="Imagem 1" />
+          <img src="imagem2.jpg" alt="Imagem 2" />
+          <img src="imagem3.jpg" alt="Imagem 3" />
+          <img src="imagem4.jpg" alt="Imagem 4" />
+          <img src="imagem5.jpg" alt="Imagem 5" />
+          <img src="imagem6.jpg" alt="Imagem 6" />
+          <img src="imagem7.jpg" alt="Imagem 7" />
+          <img src="imagem8.jpg" alt="Imagem 8" />
+        </div>
+      </div>
+
+      <h2>Feliz dia dos Namorados!</h2>
+      <p class="justificativa">
+        Amor, hoje é um dia extremamente especial, na verdade para mim todos os
+        dias são especiais porque você está presente neles, infelizmente não
+        posso ter o seu afeto físico e nem lhe oferecer o meu como eu gostaria,
+        mas espero que o sinta com minhas plavras. &#40;lhe prometo que não usei
+        o gpt nem pra corrigir os erros gramaticais kkkkk&#41; Enfim, quero
+        apenas demonstrar o quanto eu te amo e o quanto quero comemorar esse dia
+        para sempre contigo, quero que saiba que eu me sinto privilegiado de ter
+        você na minha vida, alguém que cuida tão bem de mim, que me ama, que me
+        dá toda a atenção do mundo e que me faz extremamente feliz e realizado
+        de ter alguém como você na minha vida. É com você quem divido minha vida
+        e todos os meus sentimentos e é com quem quero continuar dividindo e em
+        um futuro começar a mutiplicar né. Eu sonho com um futuro em que eu veja
+        nossos filhos correndo pela casa e aí eu olhe para você no balcão e diga
+        que sou um homem realizado em ter uma linda mulher ao meu lado e filhos
+        maravilhoso, eu quero muito viver isso contigo! Pensando nisso coloquei um contador, para indicar o tempo que estamos juntos, quero que veja e saiba que esse tempo, é o tempo que eu tenho sido o cara mais feliz do mundo. Eu te amo, e eu te quero para sempre!
+        <div class="contador" id="contador"></div>
+      </p>
+      <p class="justificativa">
+        Além disso, como não pude te enviar flores físicas, lhe envio essas com todo carinho!
+      </p>
+      <a href="/flowers/index.html"
+        ><button class="flower-button">Aqui suas flores</button></a
+      >
+    </div>
+
+    <script>
+      // Contador dinâmico com conversão para anos e meses
+      function atualizarContador() {
+        const dataFinal = new Date('2023-06-12T00:00:00') // Data para o Dia dos Namorados
+        const agora = new Date()
+        const distancia = agora - dataFinal
+
+        // Calculando anos, meses, dias, horas, minutos e segundos
+        const anos = Math.floor(distancia / (1000 * 60 * 60 * 24 * 365))
+        const meses = Math.floor(
+          (distancia % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)
+        )
+        const dias = Math.floor(
+          (distancia % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
+        )
+        const horas = Math.floor(
+          (distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        )
+        const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60))
+        const segundos = Math.floor((distancia % (1000 * 60)) / 1000)
+
+        document.getElementById(
+          'contador'
+        ).innerHTML = `${anos} anos, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`
+      }
+
+      setInterval(atualizarContador, 1000) // Atualiza a cada segundo
+    </script>
+  </body>
+</html>
